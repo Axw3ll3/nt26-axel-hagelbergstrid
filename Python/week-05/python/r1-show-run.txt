@@ -1,4 +1,4 @@
-Current configuration : 1986 bytes
+Current configuration : 2024 bytes
 !
 version 17.6.3
 service timestamps log datetime msec
@@ -114,6 +114,7 @@ interface GigabitEthernet0/1/3
 router rip
 !
 ip classless
+ip route 0.0.0.0 0.0.0.0 203.0.113.1 
 !
 ip flow-export version 9
 !
