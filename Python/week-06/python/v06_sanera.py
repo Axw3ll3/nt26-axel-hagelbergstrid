@@ -3,7 +3,7 @@ from pathlib import Path
 def main():
     hemligt = ["secret", "password", "snmp-server community"]
     
-    filnamn = Path("Python") / "week-05" / "python" / "r1-rakonfig.txt"
+    filnamn = Path("Python") / "week-06" / "python" / "r1-rakonfig.txt"
     routes = []
     rensade = []
     borttagna = 0
@@ -15,8 +15,11 @@ def main():
             else:
                 rensade.append(rad)
                 
-    with open ("r1-show-run.txt", "w") as f:
+    with open ("r1-show-runt.txt", "w") as f:
         for rad in rensade:
             f.write (rad)
             
     print (f"Tog borg {borttagna} rader. Resultatet ligger i r1-show-run.txt.")
+    
+if __name__ == "__main__":
+    main()
