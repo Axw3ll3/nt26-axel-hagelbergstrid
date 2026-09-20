@@ -1,7 +1,10 @@
+from pathlib import Path
+
 def main():
     hemligt = ["secret", "password", "snmp-server community"]
     
-    filnamn = "r1-rakonfig.txt"
+    filnamn = Path("Python") / "week-05" / "python" / "r1-rakonfig.txt"
+    routes = []
     rensade = []
     borttagna = 0
     
