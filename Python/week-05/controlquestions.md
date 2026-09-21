@@ -52,10 +52,13 @@ routing-table, connected route, static route, next hop and sub-interface.
 /24 ger 256 adresser, 254 användbara. Två av dessa används i detta scenario så 252 oanvända. Rimligt val eftersom en organisation som ger varje länk en hel /24 slipper räkna, slipper misstag och kan läsa av vilken länk direkt på adressen. Priset betalas i adresser, i ett internt 10.-nät finns det gott om dem.
 
 # 14 Här är en routingtabell. Ett paket ska till 192.168.2.50. Vilken rad används, och vad händer med paketet?
+<img width="558" height="174" alt="Screenshot 2026-09-11 173749" src="https://github.com/user-attachments/assets/4d79b453-bf5e-47fc-b79d-779ffa63e8b7" />
 
 Raden S 192.168.2.0/24 via 10.0.0.2 används. Paketet skickas till 10.0.0.2 som är routern till andra änden av länken.
 
 # 15 Här är ett utdrag från Nordviks router. Datorer i VLAN 20 når varandra men inte sin gateway. Vad är fel?
+<img width="545" height="115" alt="Screenshot 2026-09-11 173941" src="https://github.com/user-attachments/assets/1949f025-e2b8-4373-bea9-a77bdd87edcc" />
+
 
 Raden 'encapsulation dot 1Q 21' är fel. Sub-interfacet heter .20, har ekonominätets adress, men lyssnar på VLAN 21, som inte finns på switchen.
 
