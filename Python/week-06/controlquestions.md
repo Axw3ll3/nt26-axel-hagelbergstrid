@@ -12,13 +12,11 @@
 
 # 7 Varför är NAT ingen säkerhetsfunktion?
 
-
 # 8 Vilka två saker måste finnas på enheten innan crypto key generate rsa fungerar?
 
 # 9 Vilken rad stänger dörren för telnet?
 
 # 10 Nämn tre saker som ska bort ur en konfigurationsfil innan du committar den.
-
 
 # 11 Skriv den engelska termen för vart och ett av följande: översättning, insida, utsida och sanering. Provet frågar efter dem.
 
@@ -27,8 +25,12 @@
 # 13 Nordvik har 70 datorer på insidan och en offentlig adress. Varje dator har i snitt tolv samtidiga förbindelser. Hur många rader står det då i show ip nat translations? Räcker portnumren?
 
 # 14 Här är en NAT-tabell. Hur många enheter på insidan syns i utdatan, och hur många offentliga adresser använder de?
+<img width="533" height="166" alt="Screenshot 2026-09-21 174132" src="https://github.com/user-attachments/assets/47970e8f-c444-4bc8-9f56-6a5ad961a704" />
+
 
 # 15 Här är ett utdrag från en router där ingenting kommer ut på internet. Vad är fel?
+<img width="544" height="189" alt="Screenshot 2026-09-21 174354" src="https://github.com/user-attachments/assets/1a5de9fa-9a6e-4319-bfa1-23ecb18078fb" />
+
 
 # 16 Skriv den fullständiga konfigurationen som ger gästnätet, och bara gästnätet, en väg ut via PAT. Alla andra nät ska lämnas orörda.
 
