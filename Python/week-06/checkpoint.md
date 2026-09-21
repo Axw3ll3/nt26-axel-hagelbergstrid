@@ -1,14 +1,12 @@
 # 1 Ge två olika skäl till att NAT behövs.
 
-# 2 Vad betyder inside respektive outside, och sitter märkningen
-på nätet eller på interfacet?
+# 2 Vad betyder inside respektive outside, och sitter märkningen på nätet eller på interfacet?
 
 # 3 Vad skiljer Inside local från Inside global?
 
 # 4 Vad gör PAT som statisk NAT inte gör?
 
-# 5 Varför fungerar inte en förbindelse som börjar utifrån, utan
-särskild konfiguration?
+# 5 Varför fungerar inte en förbindelse som börjar utifrån, utan särskild konfiguration?
 
 # 6 Vilket ord i NAT-kommandot gör det till PAT?
 
