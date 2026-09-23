@@ -4,6 +4,7 @@ def main():
     hemligt = ["secret", "password", "snmp-server community"]
     
     filnamn = Path("Python") / "week-06" / "python" / "r1-rakonfig.txt"
+    ut_filnamn = filnamn.parent / "r1-show-run.txt"
     routes = []
     rensade = []
     borttagna = 0
@@ -14,8 +15,9 @@ def main():
                 borttagna = borttagna + 1
             else:
                 rensade.append(rad)
+    
                 
-    with open ("r1-show-runt.txt", "w") as f:
+    with open (ut_filnamn, "w") as f:
         for rad in rensade:
             f.write (rad)
             
