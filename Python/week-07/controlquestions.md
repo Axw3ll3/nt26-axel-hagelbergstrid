@@ -25,3 +25,7 @@
 # 13 Nordviks förbindelse ut är 100 Mbit/s. Grafen visar i snitt 38 Mbit/s under ett femminutersintervall. Räkna ut hur många gigabyte som passerade under de fem minuterna, och förklara varför siffran inte säger något huruvida någon fick vänta.
 
 # 14 Här är ett utdrag ur en logg. Vad hände, hur länge varade det, och varöfr skulle du inte hitta det med show interfaces status?
+<img width="762" height="328" alt="image" src="https://github.com/user-attachments/assets/bbb5e7ad-c550-4b81-b049-d48535c59fd9" />
+
+# 15 Här är ett utdrag från en enhet där loggen verkar tom. Vad är förklaringen, och vilken rad avslöjar den?
+<img width="753" height="127" alt="image" src="https://github.com/user-attachments/assets/4dda27c0-36a5-4237-9c6e-317e91558894" />
