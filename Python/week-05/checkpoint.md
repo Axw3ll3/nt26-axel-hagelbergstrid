@@ -1,7 +1,7 @@
-show ip ssh nedan (inte kunnat göra mot en riktig router än):
+<img width="566" height="364" alt="image" src="https://github.com/user-attachments/assets/e30b7d4c-f7dc-48c4-ad6f-e40ff5b5ae69" />
 
-<img width="408" height="45" alt="image" src="https://github.com/user-attachments/assets/cc798126-e982-4a5e-8826-085c88134b7c" />
 
-Inlogg mot ssh (i CPT, inte hunnit göra mot server racken än)
 
-<img width="509" height="136" alt="image" src="https://github.com/user-attachments/assets/32b2933b-f980-4ccb-b496-53e93863021f" />
+Det som sägs här är att Gateway of last resort går mot adressen 0.0.0.0 och nätet 0.0.0.0.
+
+Under detta säger den vilka nät dem är anslutna/har vägar till via vilka IP samt vilken port. C står för connected, S för Static och L står för Local.
