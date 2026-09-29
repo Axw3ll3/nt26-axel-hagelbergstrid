@@ -29,3 +29,11 @@
 
 # 15 Här är ett utdrag från en enhet där loggen verkar tom. Vad är förklaringen, och vilken rad avslöjar den?
 <img width="753" height="127" alt="image" src="https://github.com/user-attachments/assets/4dda27c0-36a5-4237-9c6e-317e91558894" />
+
+# 16 Skriv de rader som krävs för att en router ska tidsstämpla loggen med milisekunder, spara 16 kB logg i minnet, hämta tid från 192.168.1.16 och skicka nivå 0 till 5 till loggservern 192.168.1.17.
+
+# 17 En kollega har satt logging trap 7 i drift och loggsekvensen fylls. Skriv den enda rad som rättar det, och skriv i en mening vad som slutar synas.
+
+# 18 Nordviks ledning vill få ett meddalnde när förbindelsen mot internet är onormalt belastad, men inte varje gång någon laddar ner en stor fil. Beskriv vad du behöver mäta, under hur lång tid, och vilken gräns du skulle sätta. Motivera varför just den gränsen, och vad du gör om larmen ändå kommer för ofta.
+
+# 19 Skriv fem meningar till en kollega som aldrig hört talas om baseline, där du förklarar varöfr ett mätvärde utan historik är värdelöst.
