@@ -67,11 +67,14 @@ Broadcast: 192.168.2.255
 370 delat med 15,4 är 24,02. Budgeten har alltså 24 accesspunkter och 0,4 watt blir över. En switch med 24 portar räcker budgeten till precis alla portar. På en med 48 portar står hälften (24) utan ström och den som kopplar en accessport till port 25 kommer aldrig få ström samt starta.
 
 # 14 Här är ett udrag från en switch. En accesspunkt ska sitta i Gi0/3 men kommer aldrig igång. Vad är fel, och vad kontrollerar du härnäst?
+<img width="476" height="250" alt="Screenshot From 2026-10-05 20-35-07" src="https://github.com/user-attachments/assets/078ae6f2-db8d-43b3-8130-940b5f28d26f" />
+
 
 Switchens PoE-budget är slut. Remaining står på 0,4 watt, och accessporten kräver 15,4.
 
 
 # 15 Här är vad en gäst ser efter att ha anslutit till Norvik-Gast i Borås. Vad är fel?
+<img width="462" height="71" alt="image" src="https://github.com/user-attachments/assets/719ae6e6-3ca9-48de-8618-3c917a472139" />
 
 Gästen hamnade i fel nät, i lagernätet. Adressen 192.168.2.34 ligger i 192.168.2.0/26, med andra ord VLAN 40 och gatewayen 192.168.2.1 bekräftar detta. Gästnätet är 192.168.2.64/26 med gateway på 192.168.2.65.
 
