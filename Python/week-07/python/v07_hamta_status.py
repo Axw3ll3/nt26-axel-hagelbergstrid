@@ -1,24 +1,24 @@
 from getpass import getpass
-
 from netmiko import ConnectHandler
+import os
+from pathlib import Path
 
-def main():
-    enhet = {
-        "device_type": "cisco_ios",
-        "host": "192.168.1.193"
-        "username: drift",
-        "password": getpass("Losenord: "),
-    }
+skript_mapp = Path(__file__).parent
+os.chdir(skript_mapp)
 
-    with ConnectHandler (**enhet) as anslutning:
-        svar = anslutning.send_command ("show ip interface brief")
-    
-    print (svar)
+enhet = {
+    "device_type": "cisco_ios",
+    "host": "192.168.2.65",
+    "username": "drift",
+    "password": getpass("Losenord: "),
+}
 
-    with open("status.txt", "w") as f:
-        f.write(svar)
+with ConnectHandler(**enhet) as anslutning:
+    svar = anslutning.send_command("show ip interface brief")
 
-    print("Sparade svaret i status.txt")
+print(svar)
 
-if __name__ == "__main__":
-    main()
+with open("status.txt", "w") as f:
+    f.write(svar)
+
+print("Sparade svaret i status.txt")
