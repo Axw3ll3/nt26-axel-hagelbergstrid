@@ -11,7 +11,7 @@ losenord = getpass("Losenord: ")
 # En rad per enhet. Lagg till fler efter samma monster.
 enheter = [
     {"namn": "R-Nordvik-1", "host": "192.168.1.193"},
-    {"namn": "SW-Nordvik-1", "host": "192.168.1.194"},
+    {"namn": "SW-Nordvik-2", "host": "192.168.1.196"},
 ]
 
 rader = ["# Inventarierapport", ""]
