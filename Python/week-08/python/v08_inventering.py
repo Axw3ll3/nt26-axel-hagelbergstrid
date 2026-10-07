@@ -25,10 +25,12 @@ for enhet in enheter:
         password=losenord,
     )
     version = anslutning.send_command("show version | include uptime")
+    model = anslutning.send_command("show version | include Cisco")
     anslutning.disconnect()
 
     rader.append(f"## {enhet['namn']} ({enhet['host']})")
     rader.append(version)
+    rader.append(model)
     rader.append("")
 
 with open("inventarie.md", "w") as f:
