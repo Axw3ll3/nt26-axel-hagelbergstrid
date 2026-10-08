@@ -8,7 +8,7 @@ os.chdir(skript_mapp)
 
 enhet = {
     "device_type": "cisco_ios",
-    "host": "192.168.2.65",
+    "host": "192.168.2.193",
     "username": "drift",
     "password": getpass("Losenord: "),
 }
