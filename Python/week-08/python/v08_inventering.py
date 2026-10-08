@@ -12,7 +12,7 @@ losenord = getpass("Losenord: ")
 enheter = [
     {"namn": "R-Nordvik-1", "host": "192.168.1.193"},
     {"namn": "SW-Nordvik-1", "host": "192.168.1.197"},
-    {"namn": "SW-Nordvik-2", "host": "192.168.1.196"},
+    {"namn": "AP-Nordvik", "host": "192.168.1.200"},
 ]
 
 rader = ["# Inventarierapport", ""]
