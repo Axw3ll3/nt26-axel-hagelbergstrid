@@ -25,8 +25,12 @@
 # 13 Nordviks tunnel-ACL täcker 192.168.1.0/26 mot 192.168.2.0/26. Skriv de två raderna - en per route - med rätt wildcardmasker och näten omvända. Räkna fram maskerna.
 
 # 14 Här är ett utdrag från en router. Tunneln sägs vara uppe, men användarna når ingenting på andra sidan. Vad är fel?
+<img width="527" height="108" alt="image" src="https://github.com/user-attachments/assets/2884e49b-77ce-43c6-96db-fd05922609c5" />
+
 
 # 15 Här är två ACL:er, en från varje sida av en tunnel. Varför kommer ingen trafik igenom.
+<img width="527" height="108" alt="image" src="https://github.com/user-attachments/assets/732fe2c4-9812-4817-b4a1-1689488360b3" />
+
 
 # 16 Skriv den ACL som pekar ut vilken trafik som ska in i tunneln mellan Göteborg och Mölndal, i båda ändarna. Ange på vilken router varje rad ska skrivas, och varför de två listorna msåte vara varandras spegelbild.
 
