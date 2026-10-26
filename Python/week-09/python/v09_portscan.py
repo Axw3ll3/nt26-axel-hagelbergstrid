@@ -17,4 +17,4 @@ for port in portar:
     except OSError:
         print(f"Port {port}: stangd eller filtrerad")
     
-s.close
+    s.close
