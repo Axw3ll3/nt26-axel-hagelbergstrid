@@ -1,49 +1,47 @@
-# 1 Vad gör en VPN-tunnel med paket, i fem steg?
+# 1 Vad är en zon, och vad är skillnaden mot ett nät?
 
-# 2 Vad skyddar ett VPN, och vad skyddar det inte?
+# 2 Vad är en DMZ till för, och varför får den inte nå insidan?
 
-# 3 Vad är skillnaden mellan site-to-site och remote access?
+# 3 I vilken ordning läser routern en ACL, och när slutar den läsa?
 
-# 4 Varför krockar NAT och kryptering, och vad heter lösningenP
+# 4 Vad kan en extended ACL som en standard-ACL inte kan?
 
-# 5 Varför går små paket fram men inte stora, genom en tunnel?
+# 5 Vad är implict deny, och hur mpnga rader måste en ACL ha för att den ska finnas?
 
-# 6 Nämn två skillnader mellan traditionell VPN och SD-WAN.
+# 6 Vad betyder wildcard-masken 0.0.0.63, och vilket prefix motsvarar den?
 
-# 7 Vad är den största vinsten med en lastbalanserare, och barför är det inte kapacietet?
+# 7 Räknas riktningen in från trafikens eller routerns synvinkel?
 
-# 8 Vad kan en lastbalanserare på lager 7 som en på lager 4 inte kan?
+# 8 Vilket kommando visar om en regel faktiskt träffat något?
 
-# 9 Vilka två kommandon visar att en tunnel är uppe respektive att trafik går igenom?
+# 9 Vad skyddar port security mot som en ACL inte ser?
 
-# 10 Vilken fråga ställer du först när något inte fungerar, oavsett vecka?
+# 10 Vad är skillnaden mellan violation restrict och violation shutdown?
 
-# 11 Skriv den engelska termen för vart och ett av följande: tunnel, kryptering, lastbalanserare och plats-till-plats. Provet frågar efter dem.
+# 11 Skriv den engelska termen för vart och ett av följande: zon, riktning, inplicit deny och port security. Provet frågar efter dem.
 
-# 12 Ett IP-paket får som mest vara 1500 byte på en vanlig Ethernetlänk. IPsec i tunnelläge lägger på ett nyt IP-huvud på 20 byte och ett ESP-huvud och en snans på tillsammans omkring 38 byte. Hur stort får det inre paketet vara? Räkna, och skriv en mening om vad som händer med ett paket som är större.
+# 12 Skriv wildcard-masken för vart och ett av följande: 192.168.1.0/26, 192.168.2.0/24, 10.0.0.0/30 och en enda värd. Räkna fram varje mask genom att dra nätmasken från 255, och visa mellanledet.
 
-# 13 Nordviks tunnel-ACL täcker 192.168.1.0/26 mot 192.168.2.0/26. Skriv de två raderna - en per route - med rätt wildcardmasker och näten omvända. Räkna fram maskerna.
+# 13 En kollega har skrivit 'deny ip 192.168.1.0 0.0.0.128 any'. Vilka adresser täcker den raden? Vilka två av Nordviks fyra nät hamnar innanför, och vilket blir det oväntade resultatet?
 
-# 14 Här är ett utdrag från en router. Tunneln sägs vara uppe, men användarna når ingenting på andra sidan. Vad är fel?
-<img width="527" height="108" alt="image" src="https://github.com/user-attachments/assets/2884e49b-77ce-43c6-96db-fd05922609c5" />
+# 14 Här är en ACL. Kontoret når fortfarande ekonomiservern trorts att raden finns. lägg märkte till att den nekande raden saknar räknare helt. Vad är fel?
 
+# 15 Här är ett utdrag från ett interface där en ACL nyss satts. Ingenting fungerar längre. Vad hände?
 
-# 15 Här är två ACL:er, en från varje sida av en tunnel. Varför kommer ingen trafik igenom.
-<img width="527" height="108" alt="image" src="https://github.com/user-attachments/assets/732fe2c4-9812-4817-b4a1-1689488360b3" />
+# 16 Skriv den fullständiga konfigurationen som stoppar gästnätet från allt inne i huset men släpper ut det mot internet: listan, alla rader i rätt ordning, och raden som sätter den på rätt interface i rätt riktning.
 
+# 17 Skriv konfigurationen för port security på Gi0/5 till Gi0/9: högst en adress per port, inlärd och sparad automatiskt, och porten ska stängas av vid överträdelse.
 
-# 16 Skriv den ACL som pekar ut vilken trafik som ska in i tunneln mellan Göteborg och Mölndal, i båda ändarna. Ange på vilken router varje rad ska skrivas, och varför de två listorna msåte vara varandras spegelbild.
+# 18 Ny beställning, som ersätter den i genomgången: "Ekonomiavdelningen kan inte nå utvecklingsservern (192.168.1.15 i kontorsnätet). Utvecklarna ska däremot kunna nå ekonomisystemet. Skriv listan, säg vilket interface och vilken riktning den ska ha, och beskriv hur du bevisar båda halvorna.
 
-# 17 Skriv de rader som undantar trafiken mellan Göteborg och Borås från NAT, givet att NAT-listan i dag är acces-list 1 permit 192.168.1.0 0.0.0.255.
+# 19 "Ingen utifrån ska kunna nå något i huset, utom vår webbserver." Nordvikhar ingen webbserver idag men ska köpa en. Beskriv var den ska stå, vilken zon den hör hemma i och vad som händer om du ställer den i kontorsnätet.
 
-# 18 Nordvik ska koppla ihop Mölndalskontoret med Göteborg. Ledningen vill inte hyra en förbindelse, och ekonomifiler ska inte kunna läsas av utomstående. Säljarna ska dessutom kunna nå ekonomisystemet från hotell. Beskriv vilka två lösningar du föreslår, vad som skiljer dem, och vilken du bygger dem i.
+# 20 "Konsulten som kommer på tisdag ska bara komma åt sin egen dator och skrivaren, ingenting annat". Beskriv två helt olika sätt att lösa det, och säg vilket du väljer och varför.
 
-# 19 Skriv fem meningar till en kollega som aldrig hört talas om VPN, där du förklarar varför en tunnel över internet kan vara säkert.
+# Skriv fem meningar till en kollega som aldrig hört talas om implicit deny, där du förklarar varför en ACL med en enda nekande rad kan ta ner ett helt nät.
 
-# Återblick
+# 22 Vad är baseline, och varflr måste den mästas innan felet?
 
-# 20 Vad är implicit deny, och varför kan en ACL med en enda rad ta ner ett helt nät?
+# 23 Vad gör PAT som statsik NAT inte gör?
 
-# 21 Vad händer med en accesspunkt som får för lite ström, och varför ser felet ut som ett nätverksfel?
-
-# 22 Räkna ut nätadress, broadcast och adressintervall för 192.168.1.192/26, utan att slå upp något.
+# 24 En ping ger inget svar. Vilka två saker kan ha gått fel?
