@@ -1,7 +1,5 @@
 # 1 Vad gör en VPN-tunnel med paket, i fem steg?
 
-En VPN tunnel är en 
-
 # 2 Vad skyddar ett VPN, och vad skyddar det inte?
 
 # 3 Vad är skillnaden mellan site-to-site och remote access?
