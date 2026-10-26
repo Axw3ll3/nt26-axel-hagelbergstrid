@@ -25,8 +25,10 @@
 # 13 En kollega har skrivit 'deny ip 192.168.1.0 0.0.0.128 any'. Vilka adresser täcker den raden? Vilka två av Nordviks fyra nät hamnar innanför, och vilket blir det oväntade resultatet?
 
 # 14 Här är en ACL. Kontoret når fortfarande ekonomiservern trorts att raden finns. lägg märkte till att den nekande raden saknar räknare helt. Vad är fel?
+<img width="519" height="84" alt="Screenshot From 2026-10-26 16-34-17" src="https://github.com/user-attachments/assets/81ccccae-bfa6-4fab-a64b-c1b62a3681ef" />
 
 # 15 Här är ett utdrag från ett interface där en ACL nyss satts. Ingenting fungerar längre. Vad hände?
+<img width="519" height="84" alt="Screenshot From 2026-10-26 16-34-24" src="https://github.com/user-attachments/assets/19933126-a1ef-4194-8856-ae5fa261d2ac" />
 
 # 16 Skriv den fullständiga konfigurationen som stoppar gästnätet från allt inne i huset men släpper ut det mot internet: listan, alla rader i rätt ordning, och raden som sätter den på rätt interface i rätt riktning.
 
