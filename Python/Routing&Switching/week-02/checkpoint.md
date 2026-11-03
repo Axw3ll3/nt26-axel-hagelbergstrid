@@ -1,3 +1,5 @@
+## A
+
 Pingen mellan Filservern och PC-Boras funkar inte då routrarna saknar väg ner till näten, de vet bara vägen till varandra. 
 
 Output från 'show ip route static':
@@ -21,3 +23,7 @@ I detta scenario försvinner svaret in i ett svart håll då den saknar returvä
 I hub & spoke med 10 kontor kommer det krävas 18 statiska rutter eftersom alla spokes behöver en rutt till hubben och hubben behöver en rutt tillbaka. Så 9 spokes till 1 hubb blir 9 vägar och 1 hubb ut till 9 spokes blir 9 till. 9 + 9 = 18 vägar. Fördelen med detta är att de är lätt att hålla reda på och lätt att lägga till då det bara behövs 2 nya rutter för varje ny enhet. Nackdelen är att det kan vara bottleneck (högre belastning).
 
 I mesh behöver man en länk till varje ställe, sedan är allt kopplat till varandra. 10 routrar som har 9 vägar (då den inte kräver vägen till sig själv) gånger 10 routrar blir 90. Så 10 * 9 med andra ord. Fördelen är att det är snabbare kommunikation då allt är direktkopplat till varandra. Nackdelen är att det är mycket att hålla koll på och svårt att lägga till då alla enheter behöver en ny rutt till den nya enheten. 
+
+## B
+Pingen fastnar då ISP inte har någon destination eller den ska skicka 192.168.1.10 pingen, så den slänger bara iväg paketet. Den har inte heller en rutt att returnera sitt svar att den tagit emot pingen, då den inte vet vart pingen ska eller hur den ska svara tillbaka slänger den bort paketet.
+
