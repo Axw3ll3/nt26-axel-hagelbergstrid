@@ -25,5 +25,5 @@ I hub & spoke med 10 kontor kommer det krävas 18 statiska rutter eftersom alla 
 I mesh behöver man en länk till varje ställe, sedan är allt kopplat till varandra. 10 routrar som har 9 vägar (då den inte kräver vägen till sig själv) gånger 10 routrar blir 90. Så 10 * 9 med andra ord. Fördelen är att det är snabbare kommunikation då allt är direktkopplat till varandra. Nackdelen är att det är mycket att hålla koll på och svårt att lägga till då alla enheter behöver en ny rutt till den nya enheten. 
 
 ## B
-Pingen fastnar då ISP inte har någon destination eller den ska skicka 192.168.1.10 pingen, så den slänger bara iväg paketet. Den har inte heller en rutt att returnera sitt svar att den tagit emot pingen, då den inte vet vart pingen ska eller hur den ska svara tillbaka slänger den bort paketet.
+Pingen fastnar då ISP inte har någon destination eller vet vart den ska skicka 192.168.1.10 pingen, så den slänger bara iväg paketet. Den har inte heller en rutt att returnera sitt svar att den tagit emot pingen, då den inte vet vart pingen ska eller hur den ska svara tillbaka slänger den bort paketet.
 
