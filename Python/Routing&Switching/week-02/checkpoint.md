@@ -15,6 +15,12 @@ Output från 'PC-Boras':
 <img width="888" height="477" alt="Screenshot From 2026-11-02 15-19-10" src="https://github.com/user-attachments/assets/665d4a78-cd2c-4077-9ef1-b79fb8978420" />
 
 
+Fas 1 handlar om att autentisera VPN-enheterna mot varandra och skapa en säker och krypterad kanal (IKE Security Association eller ISAKMP SA) som i sin tur används för att skydda förhandlingarna i fas 2.
+
+Fas 2 (kallas Quick Mode i IKEv1), här förhandlas de parametrar som ska skydda själva användartrafiken som skickas genom tunneln (skapar IPsec Security Associations).
+
+Det som avgörs om ett visst datapaket krypteras genom en IPsec-tunnel styrs av hur VPN:en är konfigurerad, antingen via ACL eller routingtabell.
+
 # VG
 Trafiken går via Nordvik eftersom längsta prefix matchingen i denna fråga går mot 0.0.0.0 0.0.0.0 (gateway of last resort) då den inte har en annan matchande IP route. Den tar vägen via Nordvik eftersom den har lägre värde på sin administrativa distans (1) medan vi satte reservvägen på AD 5.
 
@@ -46,3 +52,4 @@ Output efter ping mellan Filserver och PC-Boras i R-Nordvik-1 och R-Boras-1 att 
 VPN:er byggs oftast efter en hub & spoke topologi eftersom det ofta minskar antaler konfigurationer och krypteringsnycklar som krävs jämfört med ett meshnätverk. I följd med detta så kräver inte hub & spoke att alla har en direktkoppling till varandra utan det räcker att dem har en koppling till hubben. Ur ett administrativt perspektiv är det lättare att hålla att konfigurera om nya enheter ska anslutas. För trafik som ska skickas mellan 2 ekrar innebär det att datapaketet först måste färdas upp från första ekraren till hubben. Detta blir en omväg (istället för en direkt väg) vilket kan öka fördröjning och belastning på hubben.
 
 Med tradittionell crypto maps (policybaserad VPN) definieras IPsec-trafiken av statsiska ACL:er, vilket gör att OSPF:s multicast-och broascast-trafik inte matchar krypteringsreglerna. Då OSPF är beroenda va multicast för att upptäcka grannar och skcika routingsuppdateringar kommer inte dessa paket att släppas igenom den regelbaserade tunneln. Lösningen för detta är att istället använda VTI (Virtual Tunnel Interfaces) vilket gör att tunneln framstår vitruellt, fysiskt gränssnitt som stödjer dynamisk routing och tillåter all protokollstrafik, inklusive multicast.
+
