@@ -39,3 +39,10 @@ Output före ping mellan Filserver och PC-Boras i R-Nordvik-1 och R-Boras-1 ('sh
 Output efter ping mellan Filserver och PC-Boras i R-Nordvik-1 och R-Boras-1 att räknaren gått upp och att inget översatts via NAT ('show crypto isakmp sa' och 'show ip nat translations'):
 
 <img width="1686" height="965" alt="Screenshot From 2026-11-04 15-47-47" src="https://github.com/user-attachments/assets/0ce4a2c2-8ca6-445a-b738-29dcb9901893" />
+
+
+# VG
+
+VPN:er byggs oftast efter en hub & spoke topologi eftersom det ofta minskar antaler konfigurationer och krypteringsnycklar som krävs jämfört med ett meshnätverk. I följd med detta så kräver inte hub & spoke att alla har en direktkoppling till varandra utan det räcker att dem har en koppling till hubben. Ur ett administrativt perspektiv är det lättare att hålla att konfigurera om nya enheter ska anslutas. För trafik som ska skickas mellan 2 ekrar innebär det att datapaketet först måste färdas upp från första ekraren till hubben. Detta blir en omväg (istället för en direkt väg) vilket kan öka fördröjning och belastning på hubben.
+
+Med tradittionell crypto maps (policybaserad VPN) definieras IPsec-trafiken av statsiska ACL:er, vilket gör att OSPF:s multicast-och broascast-trafik inte matchar krypteringsreglerna. Då OSPF är beroenda va multicast för att upptäcka grannar och skcika routingsuppdateringar kommer inte dessa paket att släppas igenom den regelbaserade tunneln. Lösningen för detta är att istället använda VTI (Virtual Tunnel Interfaces) vilket gör att tunneln framstår vitruellt, fysiskt gränssnitt som stödjer dynamisk routing och tillåter all protokollstrafik, inklusive multicast.
