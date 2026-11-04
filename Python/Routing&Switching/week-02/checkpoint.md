@@ -27,3 +27,15 @@ I mesh behöver man en länk till varje ställe, sedan är allt kopplat till var
 ## B
 Pingen fastnar då ISP inte har någon destination eller vet vart den ska skicka 192.168.1.10 pingen, så den slänger bara iväg paketet. Den har inte heller en rutt att returnera sitt svar att den tagit emot pingen, då den inte vet vart pingen ska eller hur den ska svara tillbaka slänger den bort paketet.
 
+
+Output från R-Nordvik-1 ('show crypto isakmp sa' och 'show crypto ipsec sa') :
+
+<img width="949" height="971" alt="Screenshot From 2026-11-03 13-03-08" src="https://github.com/user-attachments/assets/78d2b45f-6491-44e6-99ba-48e932cc304c" />
+
+Output före ping mellan Filserver och PC-Boras i R-Nordvik-1 och R-Boras-1 ('show crypto isakmp sa'):
+
+<img width="1686" height="965" alt="Screenshot From 2026-11-04 15-47-02" src="https://github.com/user-attachments/assets/2edd5773-831d-40dc-85f6-216803f15ceb" />
+
+Output efter ping mellan Filserver och PC-Boras i R-Nordvik-1 och R-Boras-1 att räknaren gått upp och att inget översatts via NAT ('show crypto isakmp sa' och 'show ip nat translations'):
+
+<img width="1686" height="965" alt="Screenshot From 2026-11-04 15-47-47" src="https://github.com/user-attachments/assets/0ce4a2c2-8ca6-445a-b738-29dcb9901893" />
