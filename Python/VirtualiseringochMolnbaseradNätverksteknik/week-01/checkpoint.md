@@ -22,6 +22,9 @@ Utdata från pingen och tabellen:
 'bridge fdb show' i veth motsvarar 'show mac address-table' i Cisco iOS.
 
 Trafik på bryggan vs. fysiskt nätverkskort:
+
 Observation: På bryggan br0 ser vi ICMP-trafiken 'echo request' och 'echo reply' mellan '192.168.10.1' och '192.168.10.2', medan 'tcpdump' på datorns eget nätverkskort (wlo1) fångade '0 packets'.
+
 Varför: Bryggan 'br0' fungerar som en virtuell L2-switch som kopplar samman 'v-a' och 'v-b' och skickar trafiken direkt mellan dessa portar i Linux-kärnan. Då mottagaren finns lokalt bakom bryggan och inte ens är ansluten till 'wlo1', skickas paketen aldrig ut på det fysiska nätverkskortet.
+
 Betydelsen av detta: För att fånga trafik mellan två virtuella maskiner på samma värd räcker det inte att lyssna på värdens fysiska nätverkskort, eftersom den interna trafiken aldrig når dit. Man måste istället fånga trafiken på den virtuella bryggan/switchen, på respektive VM:s virtuella nätverksgränssnitt (veth) eller inne i gästsystemen.
